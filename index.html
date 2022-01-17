@@ -1,47 +1,85 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-      <style>
-            body{
-                background-color: rgb(224, 210, 210);
-            }
-            #a1{
-            width: 50%;
-            height: 60%;
-            display: block;
-            margin-top: auto;
-            margin-left: auto;
-            margin-right: auto;
-            }
-            
-            .an{ 
-                margin-top: auto ;
-                
-               }
-        </style>
 
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<Title>AGE动漫</Title>
+    <!-- 参考山羊の前端小窝仿真的 -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <img src="https://github.com/Iandillusive/Iandillusive.github.io/blob/main/example-6147.jpg?raw=true">
+    <title>illusive's personal website</title>
 </head>
-<body>
-    <h1>夏目友人帐 第一季</h1>
-    <img id="a1" src="/青春/迅雷下载/backiee-119162.jpg"> 
-    <p class="an"> 播放列表1
-        <hr/>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_1" target="_blank">第1集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_2" target="_blank">第2集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_3" target="_blank">第3集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_4" target="_blank">第4集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_5" target="_blank">第5集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_6" target="_blank">第6集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_7" target="_blank">第7集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_8" target="_blank">第8集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_9" target="_blank">第9集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_10" target="_blank">第10集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_11" target="_blank">第11集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_12" target="_blank">第12集</a>
-            <a href="https://www.agefans.vip/play/20080002?playid=3_13" target="_blank">第13集</a>
-    </p>
 
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .shell{
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 3px;
+    }
+    .shell div{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        font-style: 30px;
+        letter-spacing: 2px;
+    }
+    .image{
+        transform: translateZ(-1px) scale(1.6);
+        background-size: cover;
+        height: 100vh;
+        z-index: -1;
+    }
+    .text{
+        height: 50vh;
+        background-color: #fff; 
+    }
+    .text h1{
+        color: #000;
+    }
+    .heading{
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px);
+        color: #fff;
+        font-size: 30px;
+    }
+
+</style>
+
+<body>  
+    <div class="shell">
+        <div class="image" style="background-image:url(https://github.com/Iandillusive/Iandillusive.github.io/blob/main/a1.jpg?raw=true);"></div>
+        <div class="heading">
+            <h1>When you come here, you may have already found that the world is not so beautiful</h1>
+        </div>
+        <div class="class">
+            <h1>Beauty may only exist in the writings of writers</h1>
+        </div>
+
+        <div class="shell">
+            <div class="image" style="background-image:url(https://github.com/Iandillusive/Iandillusive.github.io/blob/main/a2.jpg?raw=true);"></div>
+            <div class="heading">
+                <h1>You may think beauty is a fantasy</h1>
+            </div>
+            <div class="class">
+                <h1>nonetheless we pursue it even it were illusive</h1>
+            </div>
+
+            <div class="shell">
+                <div class="image" style="background-image:url(https://github.com/Iandillusive/Iandillusive.github.io/blob/main/a3.jpg?raw=true);"></div>
+                <div class="heading">
+                    <h1>whereas she could be perceive</h1>
+                </div>
+                <div class="class">
+                    <h1>You can not belive in beauty,
+                        but you can't give up the pursuit of beauty</h1>
+                </div>
+    </div>
 </body>
 </html>
