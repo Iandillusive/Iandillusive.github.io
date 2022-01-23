@@ -1,120 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- 参考山羊の前端小窝仿真的 -->
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/ico" href=https://github.com/Iandillusive/Iandillusive.github.io/blob/main/desktop-288734.png?raw=true>
-    <title>blank</title>
-    
+    <link rel="icon" type="icon/image" href="https://github.com/Iandillusive/Iandillusive.github.io/blob/main/desktop-288734.png?raw=true">
+    <title>wei's personal website</title>
+   
 </head>
-
 <style>
-    
-    *{
-        padding: 0;
-        margin: 0;
-    }  
-    .shell{
-        height: 100vh;
-        overflow-x: hidden;
-        perspective: 3px;
-    }
-    .shell div{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        font-style: 30px;
-        letter-spacing: 2px;
-    }
-    .image{
-        transform: translateZ(-1px) scale(1.6);
-        background-size: cover;
-        height: 100vh;
-        z-index: -1;
-    }
-    .text{
-        height: 50vh;
-        background-color: #fff; 
-    }
-    .text h1{
-        color: #000;
-    }
-    .heading{
-        z-index: -1;
-        transform: translateY(-30vh) translateZ(1px);
-        color: #fff;
-        font-size: 30px;
-    }
-    ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    position: absolute;
-    }
-    ::-webkit-scrollbar-track {
-        border-radius: 3px;
-        background: rgba(0, 0, 0, 0);
-        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
-    }
-    /* 滚动条滑块 */
-    ::-webkit-scrollbar-thumb {
-        border-radius: 3px;
-        background: rgba(0,0,0,0.12);
-        -webkit-box-shadow: inset 0 0 10px rgb(5, 5, 5);
-    }
-    #back {
-        border: blanchedalmond 1px solid;
-        border-radius: 20px;
-        padding: 0 15px;
-        margin-top: 0px;
-        text-align: center;
-        background-color: rgb(48, 48, 48);
-        text-decoration: none;
-        color: rgb(17, 13, 13);
-        transition: 0.5s;
-        height: 12vh;
-    }
-    #back h1 {
-        font-size: 10vh;
-    }
-    #back:hover {
-        color: black;
-        background-color: rgb(5, 5, 5);
+        *{
+            padding: auto;
+            margin-top: auto;
+        }
+        .h1{
+            color: #000;
+            overflow: 0px;
+        }
+        ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 3px;
+            background: rgba(0, 0, 0, 0);
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0);
+        }
+        /* 滚动条滑块 */
+        ::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background: rgba(0,0,0,0.12);
+            -webkit-box-shadow: inset 0 0 10px rgb(5, 5, 5);
+        }
+        #header {
+        height: 10vh;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background-color: #153f0b;
+        opacity: 0.9;
+        background-image:  linear-gradient(135deg, rgba(12, 70, 15, 1) 25%, transparent 25%), linear-gradient(225deg, rgba(12, 70, 15, 1) 25%, transparent 25%), linear-gradient(45deg, rgba(12, 70, 15, 1) 25%, transparent 25%), linear-gradient(315deg, rgba(12, 70, 15, 1) 25%, #153f0b 25%);
+        background-position:  30px 0, 30px 0, 0 0, 0 0;
+        background-size: 30px 30px;
+        background-repeat: repeat;
     }
 
+    .dropdown {
+        /* Border */
+        display: flex;
+        flex-direction: row-reverse;
+
+        /* Reset list styles */
+        list-style-type: none;
+
+        height: 100%;
+    }
+
+    .dropdown li {
+        /* Spacing */
+        padding: 1vh;
+
+        /* Used to position the sub dropdown */
+        position: relative;
+        color: rgb(216, 255, 206);
+        margin: 1vh 1vw;
+
+        /* Border */
+        border-radius: 10px;
+
+        font-size: 4vh;
+        text-align: center;
+    }
+
+    .dropdown li a {
+        text-decoration: none;
+        color: rgb(197, 243, 179);
+    }
+
+    /* The sub dropdown */
+    .dropdown ul {
+        /* Border */
+        border: 1px solid rgba(40, 150, 6, 0.897);
+        border-radius: 10px;
+
+        /* Hidden by default */
+        display: none;
+
+        /* Absolute position */
+        left: 0;
+        position: absolute;
+        top: 100%;
+
+        /* Reset styles */
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        /* Width */
+        width: 15vw;
+
+        background-color: rgba(32, 173, 32, 0.521);
+    }
+
+    /* The second level sub dropdown */
+    .dropdown ul ul {
+        position: absolute;
+        top: 0;
+        left: -100%;
+    }
+
+    /* Change background color of list item when being hovered */
+    .dropdown li:hover {
+        background-color: rgba(170, 223, 128, 0.493);
+    }
+
+    /* Show the direct sub dropdown when hovering the list item */
+    .dropdown li:hover > ul {
+        display: block;
+    }
+    body{background-image: url(https://github.com/Iandillusive/Iandillusive.github.io/blob/main/desktop-288734.jpg?raw=true) ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: 100%;
+    }
 </style>
 
-<body>  
-    <div class="shell">
-        <div class="image" style="background-image:url(https://github.com/Iandillusive/Iandillusive.github.io/blob/main/a1.jpg?raw=true);"></div>
-        <div class="heading">
-            <h1>Harder</h1>
-        </div>
-        <div class="text">
-            <h1>Better</h1>
-        </div>
+<body>
+    <div id="header">
+        <ul class="dropdown">
+            <!-- left -->
+            <li style="position: absolute; left: 2vw;"><a href="#">Home</a></li>
 
-            <div class="image" style="background-image:url(https://github.com/Iandillusive/Iandillusive.github.io/blob/main/a2.jpg?raw=true);"></div>
-            <div class="heading">
-                <h1>Faster</h1>
-            </div>
-            <div class="text">
-                <h1>Stronger</h1>
-            </div>
+            <!-- right -->
+            <li><a href="https://github.com/nhwwnhww/nhwwnhww.github.io">About</a></li>
 
-                <div class="image" style="background-image:url(https://github.com/Iandillusive/Iandillusive.github.io/blob/main/a3.jpg?raw=true);"></div>
-                <div class="heading">
-                    <h1>Making Better </h1>
-                </div>
-                <div class="text">
-                    <h1>Make things stronger</h1>
-                </div>
-                <div><a href="jia's personal website-1.html" id="back"><h1>back</h1></a></div>
+            <li>
+                <div><a href="">Anime</a></div>
+                <!-- First level sub dropdown -->
+                <ul>
+                    <li>
+                        <div><a href="https://www.agemys.com/">AGE动漫</a></div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Building</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Building</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Building</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>!!Don't Click!!</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="./web_page/capsui_html-master/index.html">真善美</a></li>
+                            <li><a href="./test_2.html">Test</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+                
+            <li>
+                <div><a href="">Mihoyo</a></div>
+                <!-- First level sub dropdown -->
+                <ul>
+                    <li>
+                        <div>Honkai Impact3</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="https://www.hoyolab.com/home">hoyolab</a></li>
+                            <li><a href="index.html">Sliding Parallax</a></li>
+                            <li><a href="web_page/NFT.html">NFT</a></li>
+                            <li><a href="web_page/masonry_layout.html">masonry layout</a></li>
+                            <li><a href="web_page/Hatsune_Miku.html">Hatsune Miku!!</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Building</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Building</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Building</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Building</div>
+                        <!-- Second level sub dropdown -->
+                        <ul>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                            <li><a href="">Building</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="
     </div>
     
 </body>
